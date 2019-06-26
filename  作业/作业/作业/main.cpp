@@ -12,7 +12,7 @@ int main()
     int handle1[6],handle2[4];                  //用于处理数据；
     ifstream judgmentin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/裁判.txt");
     ifstream competitorin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/选手.txt");
-    ofstream out("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/裁判.txt");
+    ofstream out("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/输出.txt");
     for(i=0;i<49;i++)                           //将数据放入数组；
     {
        if((i+1)%7==0)                           //将裁判名放入对应数组；
