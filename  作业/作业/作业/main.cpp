@@ -3,8 +3,9 @@
 using namespace std;
 int main()
 {
+    int average[6];//存储平均成绩；
     int a,b,c,i,j;//用于循环;
-    int x,average,sum=0;//用于处理数据；
+    int x,sum=0;//用于处理数据；
     int score[41]; //存放裁判打分；
     string name[6];//存放裁判姓名；
     int handle1[5],handle2[3];//用于处理数据；
@@ -24,9 +25,9 @@ int main()
     for(b=0;b<7;b++)//对数据进行处理；
     {
         c=0;
-        for(i=b*6;i<(b+1)*6;i++)//将数据放入处理数组
+        for(i=0;i<6;i++)//将数据放入处理数组
         {
-            handle1[c]=score[i];
+            handle1[c]=score[i*6+b];
             c++;
         }
         for(a=0;a<6;a++)//进行冒泡排序；
@@ -41,7 +42,7 @@ int main()
                 }
             }
         }
-        for(j=1;j<5;j++)//去掉最高分，去掉最低分，求取平均分
+        for(j=1;j<5;j++)//去掉最高分，去掉最低分，求取平均分；
         {
             for(a=0;a<4;a++)
             {
@@ -50,7 +51,7 @@ int main()
             for(a=0;a<4;a++)
             {
                 sum=sum+handle2[a];
-                average=sum/4;
+                average[b]=sum/4;
             }
         }
     }
