@@ -3,11 +3,11 @@
 using namespace std;
 int main()
 {
-    int average;   //
-    int i,j//用于循环
+    int a,b,c,i,j;//用于循环;
+    int x,average,sum=0;//用于处理数据；
     int score[41]; //存放裁判打分；
     string name[6];//存放裁判姓名；
-    int handle[5];//用于处理数据；
+    int handle1[5],handle2[3];//用于处理数据；
     ifstream in("/Users/s20181106277/Desktop/ 作业/作业/裁判.txt");
     for(i=0;i<49;i++)//将数据放入数组；
     {
@@ -21,11 +21,37 @@ int main()
            in>>score[i-j];
        }
     }
-    for(i=0;i<42;i++)
+    for(b=0;b<7;b++)//对数据进行处理；
     {
-        for(j=0;j<6;j++)//
+        c=0;
+        for(i=b*6;i<(b+1)*6;i++)//将数据放入处理数组
         {
-            handle[j]=score[i];
+            handle1[j]=score[i];
+            c++;
+        }
+        for(a=0;a<6;a++)//进行冒泡排序；
+        {
+            for(j=0;j<6;j++)
+            {
+                if(handle1[j]>=handle1[j+1])
+                {
+                    x=handle1[j+1];
+                    handle1[j+1]=handle1[j];
+                    handle1[j]=x;
+                }
+            }
+        }
+        for(j=1;j<5;j++)//去掉最高分，去掉最低分，求取平均分
+        {
+            for(a=0;a<4;a++)
+            {
+                handle2[a]=handle1[j];
+            }
+            for(a=0;a<4;a++)
+            {
+                sum=sum+handle2[a];
+                average=sum/4;
+            }
         }
     }
 }
