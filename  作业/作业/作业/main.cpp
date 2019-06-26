@@ -62,5 +62,17 @@ int main()
     {
         competitorin>>competitor[i];
     }
+    for(a=0;a<7;a++)                            //进行冒泡排序；
+    {
+        for(j=0;j<7;j++)
+        {
+            if(average[j]>=average[j+1])
+            {
+                x=average[j+1];
+                average[j+1]=average[j];
+                average[j]=x;
+            }
+        }
+    }
     return 0;
 }
