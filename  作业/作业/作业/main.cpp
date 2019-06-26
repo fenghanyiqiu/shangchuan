@@ -26,7 +26,7 @@ int main()
         c=0;
         for(i=b*6;i<(b+1)*6;i++)//将数据放入处理数组
         {
-            handle1[j]=score[i];
+            handle1[c]=score[i];
             c++;
         }
         for(a=0;a<6;a++)//进行冒泡排序；
