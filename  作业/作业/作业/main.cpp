@@ -62,7 +62,7 @@ int main()
     {
         competitorin>>competitor[i];
     }
-    for(a=0;a<7;a++)                            //进行冒泡排序；
+    for(a=0;a<7;a++)                            //进行冒泡排序；排序之前应该先把选手信息与分数绑定；
     {
         for(j=0;j<7;j++)
         {
