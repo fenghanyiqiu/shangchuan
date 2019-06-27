@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+#include<iomanip>
 using namespace std;
 int main()
 {
@@ -45,6 +46,7 @@ int main()
                 }
             }
         }
+        out<<std::left<<setw(8)<<name[b];
         for(j=1;j<5;j++)                        //去掉最高分，去掉最低分，求取平均分；
         {
             for(a=0;a<4;a++)
