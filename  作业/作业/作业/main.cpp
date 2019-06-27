@@ -7,12 +7,12 @@ int main()
     int rank[6]={1,2,3,4,5,6};                       //用于排名
     int number[6]={0,1,2,3,4,5};                     //为学生编号
     int average[6];                                  //存储平均成绩；
-    int a,b,i,j;                                   //用于循环;
+    int a,b,i,j;                                     //用于循环;
     int x,sum,m,n;  string y,z;                      //用于处理数据；
     int score[42];                                   //存放裁判打分；
     string name[7];                                  //存放裁判姓名；
     string competitor[12];                           //选手信息；
-    int handle1[7],handle2[5],handle3[6];                       //用于处理数据；
+    int handle1[7],handle2[5],handle3[6];            //用于处理数据；
     ifstream judgmentin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/裁判.txt");
     ifstream competitorin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/选手.txt");
     ofstream out("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/输出.txt");
@@ -83,23 +83,23 @@ int main()
             }
         }
     }
-    out<<std::left<<setw(12)<<"排名";
+    out<<std::left<<setw(12)<<"排名";                  //输出排名
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<rank[i];
     }
     out<<endl;
-    out<<std::left<<setw(15)<<"学院编号";
+    out<<std::left<<setw(15)<<"学院编号";               //输出学院编号
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<competitor[i*2];
     }
-    out<<endl<<std::left<<setw(12)<<"姓名";
+    out<<endl<<std::left<<setw(12)<<"姓名";            //输出姓名
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<competitor[i*2+1];
     }
-    out<<endl<<std::left<<setw(15)<<"最终成绩";
+    out<<endl<<std::left<<setw(15)<<"最终成绩";         //输出最终成绩与裁判打分
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<average[i];
