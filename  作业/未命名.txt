@@ -1,0 +1,10 @@
+排名       1       2       3       4       5       6     
+学院编号    0426    0830    0911    0426    0830    0911
+姓名       wudi    lixi    azhi    wuru    xiyi    yiya
+Zhao01    82
+out<<std::left<<setw(8)<<name[b];             //输出裁判姓名；
+        for(j=0;j<6;j++)
+        {
+            out<<std::left<<setw(8)<<handle1[j];      //按名次输出裁判打分；
+        }
+    
