@@ -5,13 +5,14 @@ using namespace std;
 int main()
 {
     int rank[6]={1,2,3,4,5,6};                       //用于排名
+    int number[6]={0,1,2,3,4,5};                     //为学生编号
     int average[6];                                  //存储平均成绩；
-    int a,b,c,i,j;                                   //用于循环;
-    int x,sum;  string y,z;                        //用于处理数据；
+    int a,b,i,j;                                   //用于循环;
+    int x,sum,m,n;  string y,z;                      //用于处理数据；
     int score[42];                                   //存放裁判打分；
     string name[7];                                  //存放裁判姓名；
     string competitor[12];                           //选手信息；
-    int handle1[7],handle2[5];                       //用于处理数据；
+    int handle1[7],handle2[5],handle3[6];                       //用于处理数据；
     ifstream judgmentin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/裁判.txt");
     ifstream competitorin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/选手.txt");
     ofstream out("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/输出.txt");
@@ -30,11 +31,9 @@ int main()
     for(b=0;b<6;b++)                                 //对数据进行处理；
     {
         sum=0;
-        c=0;
         for(i=0;i<7;i++)                             //将数据放入处理数组
         {
-            handle1[c]=score[i*6+b];
-            c++;
+            handle1[i]=score[i*6+b];
         }
         for(a=0;a<7;a++)                             //进行冒泡排序；
         {
@@ -78,6 +77,9 @@ int main()
                 z=competitor[2*(j+1)+1];
                 competitor[2*(j+1)+1]=competitor[2*j+1];
                 competitor[2*j+1]=z;
+                n=number[j+1];
+                number[j+1]=number[j];
+                number[j]=n;
             }
         }
     }
@@ -102,9 +104,20 @@ int main()
     {
         out<<std::left<<setw(8)<<average[i];
     }
+    out<<endl;
     for(i=0;i<7;i++)
     {
-        out<<std::left<<setw(8)<<name[i];
+        out<<std::left<<setw(9)<<name[i];
+        for(j=0;j<6;j++)
+        {
+            handle3[j]=score[j+6*i];
+        }
+        for(j=0;j<6;j++)
+        {
+            m=number[j];
+            out<<std::left<<setw(8)<<handle3[m];
+        }
+        out<<endl;
     }
     return 0;
 }
