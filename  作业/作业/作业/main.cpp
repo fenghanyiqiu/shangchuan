@@ -6,7 +6,7 @@ int main()
 {
     int rank[6]={1,2,3,4,5,6};                       //用于排名
     int number[6]={0,1,2,3,4,5};                     //为学生编号
-    int average[6];                                  //存储平均成绩；
+    double average[6];                               //存储平均成绩；
     int a,b,i,j;                                     //用于循环;
     int x,sum,m,n;  string y,z;                      //用于处理数据；
     int score[42];                                   //存放裁判打分；
@@ -56,7 +56,7 @@ int main()
         {
             sum=sum+handle2[i];
         }
-        average[b]=sum/5;
+        average[b]=sum/5.0;
     }
     for(i=0;i<12;i++)                                 //将选手数据存入数组；
     {
