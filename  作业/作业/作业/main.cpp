@@ -97,7 +97,7 @@ int main()
         out<<std::left<<setw(8)<<rank[i];
     }
     out<<endl;
-    out<<std::left<<setw(12)<<"学号";                //输出学院编号
+    out<<std::left<<setw(12)<<"学号";                   //输出学院编号
     for(i=0;i<N;i++)
     {
         out<<std::left<<setw(8)<<competitor[i*2];
