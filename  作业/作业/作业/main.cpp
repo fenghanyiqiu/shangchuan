@@ -83,23 +83,23 @@ int main()
             }
         }
     }
-    out<<std::left<<setw(12)<<"排名";                  //输出排名
+    out<<std::left<<setw(12)<<"排名";                   //输出排名
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<rank[i];
     }
     out<<endl;
-    out<<std::left<<setw(15)<<"学院编号";               //输出学院编号
+    out<<std::left<<setw(15)<<"学院编号";                //输出学院编号
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<competitor[i*2];
     }
-    out<<endl<<std::left<<setw(12)<<"姓名";            //输出姓名
+    out<<endl<<std::left<<setw(12)<<"姓名";             //输出姓名
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<competitor[i*2+1];
     }
-    out<<endl<<std::left<<setw(15)<<"最终成绩";         //输出最终成绩与裁判打分
+    out<<endl<<std::left<<setw(15)<<"最终成绩";          //输出最终成绩与裁判打分
     for(i=0;i<6;i++)
     {
         out<<std::left<<setw(8)<<average[i];
