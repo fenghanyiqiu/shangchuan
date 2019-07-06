@@ -8,7 +8,7 @@ int main()
     int rank[N];
     int number[N];
     double average[N];
-    int a,b,i,j;
+    int i,j,k;
     int m,n;
     string y,z;
     double sum,x;
@@ -40,14 +40,14 @@ int main()
            judgmentin>>score[i-j];
        }
     }
-    for(b=0;b<N;b++)
+    for(k=0;k<N;k++)
     {
         sum=0;
         for(i=0;i<7;i++)
         {
-            handle1[i]=score[i*(N)+b];
+            handle1[i]=score[i*(N)+k];
         }
-        for(a=0;a<7;a++)
+        for(i=0;i<7;i++)
         {
             for(j=0;j<7;j++)
             {
@@ -67,13 +67,13 @@ int main()
         {
             sum=sum+handle2[i];
         }
-        average[b]=sum*1.0/5.0;
+        average[k]=sum*1.0/5.0;
     }
     for(i=0;i<2*N;i++)
     {
         competitorin>>competitor[i];
     }
-    for(a=0;a<N;a++)
+    for(i=0;i<N;i++)
     {
         for(j=0;j<N;j++)
         {
