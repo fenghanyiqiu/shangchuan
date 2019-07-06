@@ -9,7 +9,9 @@ int main()
     int number[N];
     double average[N];
     int a,b,i,j;
-    int m,n;  string y,z;  double sum,x;
+    int m,n;
+    string y,z;
+    double sum,x;
     int score[N*7];
     string name[7];
     string competitor[N*2];
@@ -31,7 +33,8 @@ int main()
        {
            j=(i+1)/(N+1)-1;
            judgmentin>>name[j];
-       } else
+       }
+       else
        {
            j=(i+1)/(N+1);
            judgmentin>>score[i-j];
