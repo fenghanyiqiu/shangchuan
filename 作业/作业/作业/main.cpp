@@ -7,7 +7,7 @@ int main()
 {
     int rank[N];                                                                           //用于排名；
     int number[N];                                                                         //辅助输出数据
-    double average[N];                                                                     //求取平均值；
+    double average[N];                                                                     //储存最终成绩；
     int i,j,k;                                                                             //用于循环
     int m,n;                                                                               //用于处理数据；
     string y,z;                                                                            //用于处理数据；
