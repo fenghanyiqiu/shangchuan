@@ -5,17 +5,17 @@
 using namespace std;
 int main()
 {
-    int rank[N];                                                                          //用于排名；
-    int number[N];                                                                       
-    double average[N];                                                                    //求取平均值；
-    int i,j,k;                                                                            //用于循环
-    int m,n;                                                                              //用于处理数据；
-    string y,z;                                                                           //用于处理数据；
-    double sum,x;                                                                         //用于处理数据；
-    int score[N*7];                                                                       //用于储存数据；
-    string name[7];                                                                       //储存裁判姓名；
-    string competitor[N*2];                                                               //存放选手信息；
-    int handle1[7],handle2[5],handle3[N];                                                 //用于处理数据；
+    int rank[N];                                                                           //用于排名；
+    int number[N];                                                                         //辅助输出数据
+    double average[N];                                                                     //求取平均值；
+    int i,j,k;                                                                             //用于循环
+    int m,n;                                                                               //用于处理数据；
+    string y,z;                                                                            //用于处理数据；
+    double sum,x;                                                                          //用于处理数据；
+    int score[N*7];                                                                        //用于储存数据；
+    string name[7];                                                                        //储存裁判姓名；
+    string competitor[N*2];                                                                //存放选手信息；
+    int handle1[7],handle2[5],handle3[N];                                                  //用于处理数据；
     ifstream judgmentin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/裁判.txt");
     ifstream competitorin("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/选手.txt");
     ofstream out("/Users/s20181106277/Desktop/shangchuan/ 作业/作业/输出.txt");
@@ -118,7 +118,7 @@ int main()
     out<<endl;
     for(i=0;i<7;i++)
     {
-        out<<std::left<<setw(9)<<name[i];
+        out<<std::left<<setw(9)<<name[i];                                                      //输出裁判姓名与对应打分；
         for(j=0;j<N;j++)
         {
             handle3[j]=score[j+N*i];
